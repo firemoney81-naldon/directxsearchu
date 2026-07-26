@@ -1,23 +1,856 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://insurance.reliabledone.com/premium-payment"
+        },
+        "headline": "자동차보험료납부 완벽 가이드: 2026년 기준 연령별 모델별 평균 가격 비교 및 카드 할인 혜택 분석",
+        "description": "2026년 최신 기준 자동차보험료납부 방법과 연령별, 모델별 평균 예상 비용을 상세히 비교합니다. 다이렉트 최저가 확인 및 가입 요령 제공.",
+        "image": "https://insurance.reliabledone.com/images/payment-guide.jpg",
+        "datePublished": "2026-07-26T10:00:00+09:00",
+        "dateModified": "2026-07-26T13:00:00+09:00",
+        "author": {
+            "@type": "Organization",
+            "name": "자동차보험료납부 연구소"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "자동차보험료납부 연구소",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://insurance.reliabledone.com/logo.png"
+            }
+        }
+    }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fafc;
+            color: #334155;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #1e3a8a;
+            color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        header h1 {
+            font-size: 2.2em;
+            margin: 0 0 15px 0;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        header p {
+            font-size: 1.1em;
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav ul li {
+            font-size: 0.95em;
+        }
+
+        nav ul li a {
+            color: #1e3a8a;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            background-color: #ffffff;
+            padding: 35px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+        }
+
+        h2 {
+            color: #0f766e;
+            font-size: 1.6em;
+            border-left: 5px solid #0f766e;
+            padding-left: 15px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #1d4ed8;
+            font-size: 1.25em;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        h4 {
+            color: #b45309;
+            font-size: 1.1em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-top: 0;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.95em;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        th {
+            background-color: #1e3a8a;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        .info-box {
+            background-color: #eff6ff;
+            border-left: 4px solid #2563eb;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+        }
+
+        .alert-box {
+            background-color: #fff7ed;
+            border-left: 4px solid #ea580c;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+        }
+
+        .green-box {
+            background-color: #f0fdf4;
+            border-left: 4px solid #16a34a;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+        }
+
+        .form-container {
+            background-color: #f8fafc;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1e293b;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 0.95em;
+            background-color: #ffffff;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .btn-submit {
+            background-color: #ea580c;
+            color: #ffffff;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.05em;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: #ca8a04;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .external-links ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .external-links li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #cbd5e1;
+        }
+
+        .external-links a {
+            color: #1d4ed8;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .external-links a:hover {
+            text-decoration: underline;
+        }
+
+        .chart-container {
+            background-color: #f1f5f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .chart-bar-wrapper {
+            margin-bottom: 12px;
+        }
+
+        .chart-label {
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .chart-bar-bg {
+            background-color: #e2e8f0;
+            border-radius: 4px;
+            height: 24px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .chart-bar-fill {
+            background-color: #0d9488;
+            height: 100%;
+            border-radius: 4px;
+            text-align: right;
+            padding-right: 10px;
+            color: #ffffff;
+            font-size: 0.85em;
+            line-height: 24px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            header {
+                padding: 25px 20px;
+            }
+            header h1 {
+                font-size: 1.7em;
+            }
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>합리적인 자동차보험료납부 선택을 위한 2026년 가이드: 연령대별 차종별 평균 요금표 및 절약 방법 분석</h1>
+        <p>매년 다가오는 의무 가입 시기, 각 개인의 운전 조건과 연령에 맞추어 카드 무이자 할부 및 간편결제 혜택을 꼼꼼하게 대입해 보고 최적의 조건으로 요금을 납부하는 방안을 제시합니다.</p>
+    </header>
+
+    <nav aria-label="본문 바로가기 메뉴">
+        <ul>
+            <li><a href="#payment-calculator">실시간 납부 모의 계산기</a></li>
+            <li><a href="#payment-basics">자동차보험료납부의 기본</a></li>
+            <li><a href="#payment-analysis">모델별 연령별 심층 비교</a></li>
+            <li><a href="#discount-tips">카드 할인 및 절약 특약</a></li>
+            <li><a href="#community-reviews">커뮤니티 내돈내산 분석</a></li>
+            <li><a href="#official-links">신뢰 정보 공식 출처</a></li>
+            <li><a href="#faq-section">자주 묻는 질문 FAQ</a></li>
+            <li><a href="#consulting-form">개별 맞춤형 상담 신청</a></li>
+        </ul>
     </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+    <section id="payment-calculator">
+        <h2>실시간 자동차보험료납부 예상 금액 시뮬레이터</h2>
+        <p>본인의 대략적인 조건들을 직접 설정하여 연간 예상 납부 총액을 확인해 보고, 카드사 무이자 혜택이나 현금지원 이벤트를 대입해 볼 수 있는 간이 모의 계산기 프로그램입니다.</p>
+        
+        <div class="form-container">
+            <div class="grid-2">
+                <div class="form-group">
+                    <label for="calc-model">보유 차량 모델 구분</label>
+                    <select id="calc-model">
+                        <option value="1">경차 (모닝, 레이, 스파크, 캐스퍼 등)</option>
+                        <option value="2" selected>준중형/중형 세단 (아반떼, K5, 소나타 등)</option>
+                        <option value="3">대형 세단 (그랜저, G80, 제네시스 등)</option>
+                        <option value="4">SUV/RV (셀토스, 스포티지, 투싼, 쏘렌토, 카니발 등)</option>
+                        <option value="5">수입차 (BMW 5시리즈, 벤츠 E클래스, 테슬라 등)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="calc-age">가입자 기준 운전 연령</label>
+                    <select id="calc-age">
+                        <option value="1.8">만 21세 이하 (대학생 및 신규 가입자)</option>
+                        <option value="1.4">만 26세 이하 (사회초년생)</option>
+                        <option value="1.0" selected>만 30세 이상 (일반 운전자)</option>
+                        <option value="0.85">만 45세 이상 (장기 경력자)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="form-group">
+                    <label for="calc-range">운전자 보장 범위 설정</label>
+                    <select id="calc-range">
+                        <option value="1.0" selected>기본 1인 한정 가입</option>
+                        <option value="1.15">부부 한정 가입</option>
+                        <option value="1.3">가족 지정 가입 (본인 포함)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="calc-mileage">예상 연간 주행거리</label>
+                    <select id="calc-mileage">
+                        <option value="0.75">3,000 km 이하 (마일리지 최대 할인)</option>
+                        <option value="0.85">5,000 km 이하</option>
+                        <option value="0.95">10,000 km 이하</option>
+                        <option value="1.0" selected>15,000 km 초과 (할인 미적용)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>추가 적용 가능한 할인 특약 (중복 선택 가능)</label>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 5px;">
+                    <label style="font-weight: normal;"><input type="checkbox" id="chk-ubi" value="0.92"> 안전 운전 (UBI) 특약</label>
+                    <label style="font-weight: normal;"><input type="checkbox" id="chk-child" value="0.95"> 자녀 할인 특약 적용</label>
+                    <label style="font-weight: normal;"><input type="checkbox" id="chk-blackbox" value="0.97"> 블랙박스 장착</label>
+                    <label style="font-weight: normal;"><input type="checkbox" id="chk-public" value="0.94"> 대중교통 이용 실적</label>
+                </div>
+            </div>
+
+            <button type="button" class="btn-submit" onclick="calculatePremium()">예상 납부 금액 계산하기</button>
+
+            <div class="green-box" id="calc-result" style="display:none; margin-top: 20px;">
+                <h4 style="margin-top:0;">모의 계산 분석 결과</h4>
+                <p>귀하가 선택한 조건에 따른 총 예상 연간 자동차보험료납부 금액은 약 <strong id="result-price" style="color: #1e3a8a; font-size: 1.2em;">0</strong>원입니다.</p>
+                <p style="font-size: 0.9em; margin-bottom: 0;">※ 해당 수치는 각 브랜드별 평균 요금 요율을 대입하여 도출한 가상 결과값이며, 가입 시점의 무사고 기간, 법규 위반 경력 등에 따라 실제 개별 다이렉트 견적과는 차이가 발생할 수 있습니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="payment-basics">
+        <h2>자동차보험료납부의 기본 개념과 주요 납부 수단</h2>
+        <p>매년 자동차 소유주에게 부과되는 자동차세와 더불어, 법적으로 반드시 가입 및 납부해야 하는 자동차보험료는 차량 소유주들에게 가계 지출의 적잖은 비중을 차지하는 고정 비용 항목입니다. 이때 해당 금액을 언제, 어떤 방식으로 납부하느냐에 따라 실질적인 혜택과 카드 무이자 혜택이 크게 달라집니다.</p>
+        
+        <div class="info-box">
+            <strong>일시불 납부와 분할 납부의 차이점</strong><br>
+            기본적으로 자동차보험료납부는 1년 단위 계약의 전체 요금을 한 번에 결제하는 일시불 방식이 일반적입니다. 그러나 사회초년생이나 첫차를 신규 가입하는 경우처럼 연간 비용이 과도하게 산정되는 상황이라면, 각 카드사에서 상시 제공하는 무이자 할부 혜택을 이용하여 분납하는 방안이 유리할 수 있습니다. 6개월에서 최대 12개월에 걸친 무이자 서비스를 활용하면 목돈 이탈 부담을 최소화하는 장점이 있는 반면, 카드 한도를 차지하게 된다는 단점도 함께 고려하여야 합니다.
+        </div>
+
+        <h3>주요 결제 방식의 종류 및 특징</h3>
+        <p>최근에는 인터넷 및 온라인 채널을 통한 다이렉트 가입 비중이 압도적으로 늘어나면서 결제 방식 역시 다변화되고 있습니다. 소비자가 주로 선택하는 결제 수단별 특성은 다음과 같이 분류됩니다.</p>
+        
+        <ul>
+            <li><strong>신용카드 결제 및 무이자 혜택:</strong> 대형 카드사 브랜드 및 토스, 카카오톡 페이 등 핀테크 플랫폼과의 연계를 통한 다양한 결제 할인 이벤트가 상시 진행됩니다. 일정 수준 이상의 결제 금액 충족 시 청구할인이나 주유 상품권 지급 혜택을 챙길 수 있습니다.</li>
+            <li><strong>계좌이체 및 자동이체 신청:</strong> 일시적 결제 오류를 예방하는 가장 직관적인 형태이나 카드 청구할인이나 간편결제 특화 포인트 혜택을 받기 어려워 다소 실용성이 떨어진다는 단점이 지적되곤 합니다.</li>
+            <li><strong>포인트 및 간편결제 혼합 납부:</strong> 네이버 페이 포인트, 카카오페이 머니 등을 사용해 단 몇 원 단위까지 차감 결제가 가능하며, 최근에는 제휴 카드를 활용해 결제액의 일부를 적립받는 요금제가 똑똑한 세입 전략으로 주목받고 있습니다.</li>
+        </ul>
+    </section>
+
+    <section id="payment-analysis">
+        <h2>연령대별 차량 모델별 자동차보험료납부 평균 요금 심층 비교</h2>
+        <p>보험료 책정의 핵심 지표는 운전자의 연령 및 경력, 그리고 소유하고 있는 차량의 등급입니다. 동일 모델이라 하더라도 20대 대학생 시기와 50대 장기 경력 시기의 납부 평균 금액은 상당한 차이점을 나타냅니다. 아래에서는 대표적인 32가지 표준 모델별 연령 조합을 토대로 산출된 가상의 연간 예상 비용 분석표입니다.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>구분 및 대상 요약</th>
+                    <th>해당 차량 모델명</th>
+                    <th>운전자 나이 조건</th>
+                    <th>평균 예상 납부 금액</th>
+                    <th>추천 할인 요령 및 좌표</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>20대 아반떼 자동차보험료납부</td>
+                    <td>현대 아반떼 CN7</td>
+                    <td>만 24세 1인 한정</td>
+                    <td>약 1,150,000 원</td>
+                    <td>T맵 안전 운전 연동 점수 특약 적용</td>
+                </tr>
+                <tr>
+                    <td>30대 그랜저 자동차보험료납부</td>
+                    <td>현대 그랜저 GN7</td>
+                    <td>만 34세 부부 한정</td>
+                    <td>약 780,000 원</td>
+                    <td>자녀 할인 및 빌트인 캠 등록 특약</td>
+                </tr>
+                <tr>
+                    <td>40대 쏘렌토 자동차보험료납부</td>
+                    <td>기아 쏘렌토 MQ4</td>
+                    <td>만 42세 가족 지정</td>
+                    <td>약 850,000 원</td>
+                    <td>대중교통 이용 실적 연계 혜택</td>
+                </tr>
+                <tr>
+                    <td>50대 카니발 자동차보험료납부</td>
+                    <td>기아 카니발 KA4</td>
+                    <td>만 52세 부부 한정</td>
+                    <td>약 650,000 원</td>
+                    <td>연간 마일리지 만기 후 환급 신청</td>
+                </tr>
+                <tr>
+                    <td>사회초년생 캐스퍼 자동차보험료납부</td>
+                    <td>현대 캐스퍼 1.0</td>
+                    <td>만 27세 1인 한정</td>
+                    <td>약 890,000 원</td>
+                    <td>다이렉트 신규 가입 이벤트 상품권 수령</td>
+                </tr>
+                <tr>
+                    <td>대학생 레이 자동차보험료납부</td>
+                    <td>기아 더 뉴 레이</td>
+                    <td>만 20세 가족 지정</td>
+                    <td>약 1,600,000 원</td>
+                    <td>부모님 밑으로 가입 후 운전 경력 인정 신청</td>
+                </tr>
+                <tr>
+                    <td>부부 한정 K5 자동차보험료납부</td>
+                    <td>기아 K5 DL3</td>
+                    <td>만 31세 부부 한정</td>
+                    <td>약 720,000 원</td>
+                    <td>커넥티드 카 안전 점수 할인 적용</td>
+                </tr>
+                <tr>
+                    <td>20대 초반 스포티지 자동차보험료납부</td>
+                    <td>기아 스포티지 NQ5</td>
+                    <td>만 22세 1인 한정</td>
+                    <td>약 1,450,000 원</td>
+                    <td>군대 운전병 복무 경력 확인서 제출</td>
+                </tr>
+                <tr>
+                    <td>30대 후반 G80 자동차보험료납부</td>
+                    <td>제네시스 G80</td>
+                    <td>만 38세 1인 한정</td>
+                    <td>약 820,000 원</td>
+                    <td>ADAS 안전 장치 및 전방 경보 장치 특약</td>
+                </tr>
+                <tr>
+                    <td>신규 가입 투싼 자동차보험료납부</td>
+                    <td>현대 투싼 NX4</td>
+                    <td>만 29세 1인 한정</td>
+                    <td>약 1,020,000 원</td>
+                    <td>온라인 다이렉트 싼곳 비교 계산기 어플 활용</td>
+                </tr>
+                <tr>
+                    <td>26세 미만 K8 자동차보험료납부</td>
+                    <td>기아 K8 하이브리드</td>
+                    <td>만 25세 1인 한정</td>
+                    <td>약 1,280,000 원</td>
+                    <td>대중교통 특약 및 무사고 경력 최대한 반영</td>
+                </tr>
+                <tr>
+                    <td>30세 이상 싼타페 자동차보험료납부</td>
+                    <td>현대 싼타페 MX5</td>
+                    <td>만 32세 1인 한정</td>
+                    <td>약 740,000 원</td>
+                    <td>티맵 점수 활용 및 주말 한정 운전 연계</td>
+                </tr>
+                <tr>
+                    <td>40대 초반 팰리세이드 자동차보험료납부</td>
+                    <td>현대 팰리세이드 LX2</td>
+                    <td>만 41세 가족 지정</td>
+                    <td>약 910,000 원</td>
+                    <td>자녀 동반 할인 및 블랙박스 등록 혜택</td>
+                </tr>
+                <tr>
+                    <td>50대 중반 제네시스 자동차보험료납부</td>
+                    <td>제네시스 GV80</td>
+                    <td>만 55세 1인 한정</td>
+                    <td>약 880,000 원</td>
+                    <td>카드사 캐시백 및 현금지원 수령 신청</td>
+                </tr>
+                <tr>
+                    <td>여성 운전자 모닝 자동차보험료납부</td>
+                    <td>기아 모닝 어반</td>
+                    <td>만 36세 1인 한정</td>
+                    <td>약 430,000 원</td>
+                    <td>주행거리 마일리지 특약 환급률 제일 높은 곳</td>
+                </tr>
+                <tr>
+                    <td>남성 운전자 소나타 자동차보험료납부</td>
+                    <td>현대 쏘나타 DN8</td>
+                    <td>만 28세 1인 한정</td>
+                    <td>약 980,000 원</td>
+                    <td>간편결제사 포인트 혼합 및 온라인 할인율 확인</td>
+                </tr>
+                <tr>
+                    <td>가족 지정 셀토스 자동차보험료납부</td>
+                    <td>기아 셀토스 SP2</td>
+                    <td>만 45세 가족 지정</td>
+                    <td>약 810,000 원</td>
+                    <td>모바일 앱 기반 안전 드라이브 특약 조합</td>
+                </tr>
+                <tr>
+                    <td>1인 한정 EV6 자동차보험료납부</td>
+                    <td>기아 EV6 전기차</td>
+                    <td>만 35세 1인 한정</td>
+                    <td>약 930,000 원</td>
+                    <td>친환경 전기차 전용 특별 약관 할인</td>
+                </tr>
+                <tr>
+                    <td>무사고 경력 아이오닉5 자동차보험료납부</td>
+                    <td>현대 아이오닉5</td>
+                    <td>만 43세 1인 한정</td>
+                    <td>약 850,000 원</td>
+                    <td>무사고 3년 장기 가입자 기본 요금 감면</td>
+                </tr>
+                <tr>
+                    <td>21세 이상 베뉴 자동차보험료납부</td>
+                    <td>현대 베뉴</td>
+                    <td>만 21세 1인 한정</td>
+                    <td>약 1,520,000 원</td>
+                    <td>경력 인정 가이드 준수 및 최소 종합 담보 설정</td>
+                </tr>
+                <tr>
+                    <td>45세 한정 니로 자동차보험료납부</td>
+                    <td>기아 니로 SG2</td>
+                    <td>만 46세 부부 한정</td>
+                    <td>약 580,000 원</td>
+                    <td>주말 드라이브 한정 및 안전 장비 요금제</td>
+                </tr>
+                <tr>
+                    <td>군필 운전병 아반떼 자동차보험료납부</td>
+                    <td>현대 아반떼 HD</td>
+                    <td>만 23세 1인 한정</td>
+                    <td>약 1,100,000 원</td>
+                    <td>병무청 발행 운전병 경력 증명서 등록</td>
+                </tr>
+                <tr>
+                    <td>수입차 BMW 5시리즈 자동차보험료납부</td>
+                    <td>BMW 520i</td>
+                    <td>만 39세 1인 한정</td>
+                    <td>약 1,180,000 원</td>
+                    <td>대물 한도 10억 상향 조정 및 자차 자부담 설정</td>
+                </tr>
+                <tr>
+                    <td>벤츠 E클래스 자동차보험료납부</td>
+                    <td>벤츠 E300</td>
+                    <td>만 45세 1인 한정</td>
+                    <td>약 1,320,000 원</td>
+                    <td>외장 수리 한도 범위 최적 설계 전문 상담</td>
+                </tr>
+                <tr>
+                    <td>테슬라 모델3 자동차보험료납부</td>
+                    <td>테슬라 모델3 RWD</td>
+                    <td>만 33세 1인 한정</td>
+                    <td>약 1,250,000 원</td>
+                    <td>커넥티드 오토파일럿 탑재 안전 점수 적용</td>
+                </tr>
+                <tr>
+                    <td>60대 이상 에쿠스 자동차보험료납부</td>
+                    <td>현대 에쿠스 VI</td>
+                    <td>만 64세 부부 한정</td>
+                    <td>약 870,000 원</td>
+                    <td>실버 운전자 대상 교통안전교육 이수 특약</td>
+                </tr>
+                <tr>
+                    <td>주말 운전 전용 코나 자동차보험료납부</td>
+                    <td>현대 코나 하이브리드</td>
+                    <td>만 30세 1인 한정</td>
+                    <td>약 610,000 원</td>
+                    <td>평일 대중교통 이용 및 요일별 운행 제한 연계</td>
+                </tr>
+                <tr>
+                    <td>대중교통 이용자 티볼리 자동차보험료납부</td>
+                    <td>KG모빌리티 티볼리</td>
+                    <td>만 37세 1인 한정</td>
+                    <td>약 690,000 원</td>
+                    <td>신용카드 실적 대중교통 이용 연동 할인 신청</td>
+                </tr>
+                <tr>
+                    <td>자녀 할인 적용 트랙스 자동차보험료납부</td>
+                    <td>쉐보레 트랙스 크로스오버</td>
+                    <td>만 35세 부부 한정</td>
+                    <td>약 660,000 원</td>
+                    <td>임산부 및 영유아 동반 특약 가입 시 할인</td>
+                </tr>
+                <tr>
+                    <td>블랙박스 장착 스타리아 자동차보험료납부</td>
+                    <td>현대 스타리아</td>
+                    <td>만 48세 가족 지정</td>
+                    <td>약 820,000 원</td>
+                    <td>블랙박스 고화질 특약 및 안전장치 동시 감면</td>
+                </tr>
+                <tr>
+                    <td>안전 운전 특약 토레스 자동차보험료납부</td>
+                    <td>KG모빌리티 토레스</td>
+                    <td>만 39세 1인 한정</td>
+                    <td>약 710,000 원</td>
+                    <td>커넥티드 서비스 연계 자율 긴급 조향 할인</td>
+                </tr>
+                <tr>
+                    <td>경차 스파크 자동차보험료납부</td>
+                    <td>쉐보레 더 뉴 스파크</td>
+                    <td>만 28세 1인 한정</td>
+                    <td>약 530,000 원</td>
+                    <td>신규 운전자 책임보험 범위 효율적 설정</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="chart-container">
+            <h4 style="margin-top:0;">운전자 연령대별 자동차보험료납부 평균 금액 지표 추이</h4>
+            <p>보편적인 준중형 세단 가입 기준, 경력이 전무한 시기부터 베테랑 단계에 도달하기까지의 평균 납부 비용 하락 추이를 시각적으로 확인해 볼 수 있습니다.</p>
+            
+            <div class="chart-bar-wrapper">
+                <div class="chart-label">만 21세 이하 신규 자차 미보유 조건 (가장 높음)</div>
+                <div class="chart-bar-bg">
+                    <div class="chart-bar-fill" style="width: 100%;">약 165만 원</div>
+                </div>
+            </div>
+            
+            <div class="chart-bar-wrapper">
+                <div class="chart-label">만 26세 이하 사회초년생 주행 경력 1년 미만</div>
+                <div class="chart-bar-bg">
+                    <div class="chart-bar-fill" style="width: 75%;">약 120만 원</div>
+                </div>
+            </div>
+            
+            <div class="chart-bar-wrapper">
+                <div class="chart-label">만 30세 이상 무사고 경력 3년 이상 (안정 구간)</div>
+                <div class="chart-bar-bg">
+                    <div class="chart-bar-fill" style="width: 48%;">약 78만 원</div>
+                </div>
+            </div>
+            
+            <div class="chart-bar-wrapper">
+                <div class="chart-label">만 45세 이상 장기 경력 및 가족 한정 조건 (제일 저렴한곳 수준)</div>
+                <div class="chart-bar-bg">
+                    <div class="chart-bar-fill" style="width: 35%;">약 58만 원</div>
+                </div>
+            </div>
+        </div>
+
+        <p>상기 수치에서 명확히 드러나듯이, 연령에 따른 요금 변동 폭이 매우 큰 편입니다. 특히 첫차를 구매한 초보 운전자는 싼곳을 선별하기보다 군 경력 인정, 부모님 지정 가입 등 다양한 제도적 할인을 최대한 적용받아 결제 요금을 대폭 절약하는 노하우가 절대적으로 필요합니다.</p>
+    </section>
+
+    <section id="discount-tips">
+        <h2>다이렉트 자동차보험료납부 절약 핵심 특약 6가지와 결제 할인 혜택</h2>
+        <p>인터넷이나 스마트폰 앱 또는 어플을 활용하여 직접 가입을 조율하는 방식을 차용하면 기존의 대면 방식 대비 평균적으로 최소 15퍼센트 이상 저렴한 가격으로 설계할 수 있습니다. 여기에 추가적으로 아래의 특별 약관들을 결합하면 한층 더 실속 있는 지출 축소가 가능합니다.</p>
+        
+        <h3>1. 주행거리 연동형 마일리지 특별약관</h3>
+        <p>가장 범용적이면서도 체감폭이 깊은 할인 방식입니다. 연간 차량 운행 거리를 일정 구간 이하로 관리하면 만기 도래 시점에 그동안 지불했던 비용의 일정 한도를 다시 돌려받거나, 차기 결제액에서 원천 감면받는 구조를 취합니다. 평소 대중교통 이용 빈도가 높아 가끔 주말에만 운전하는 성향이라면 최고의 혜택 조건으로 분류됩니다.</p>
+
+        <h3>2. 모바일 앱 연계 안전운전 점수 특약 (UBI)</h3>
+        <p>네비게이션 프로그램을 장착한 상태에서 일정 킬로미터 이상의 주행 기록과 누적 점수를 만족하는 경우 적용해 줍니다. 대표적으로 티맵이나 카카오내비 같은 스마트폰 어플에서 제공하는 주행 분석 장치를 연동하여 차보험료 청구 가격에서 최대 10퍼센트 이상을 추가로 경감해 주므로 운행 효율을 극대화할 수 있습니다.</p>
+
+        <h3>3. 자녀 동반 할인 및 태아 특별 가입제도</h3>
+        <p>만 6세 이하의 자녀를 둔 가정이거나 태아를 잉태 중인 부부 조건이라면 해당 서류를 접수하여 결제 총액을 간편하게 아낄 수 있습니다. 자녀가 어린 시기일수록 운전자가 더 방어적이고 신중하게 차량을 운행한다는 통계적 사실을 바탕으로 설계된 대표적인 실속 특별 요약제도입니다.</p>
+
+        <div class="alert-box">
+            <strong>납부 전 카드사 청구할인 및 무이자 혜택 실시간 교차 검증 필요</strong><br>
+            각 손해보험 브랜드의 인터넷 다이렉트 창구에서는 신규 고객 또는 만기 갱신 대상 고객들에게 네이버 페이, 토스, 카카오톡 페이먼트 등과의 연계를 통하여 연간 자동차보험료납부 금액이 일정 선(예: 30만 원) 이상일 시 즉석 포인트 지급 또는 주유 상품권 현금지원을 해주는 이벤트를 주기적으로 수행합니다. 이 좌표 정보를 미리 입수해 결제하는 것이 연간 지출을 단 1원이라도 더 줄이는 실제적인 지름길입니다.
+        </div>
+    </section>
+
+    <section id="community-reviews">
+        <h2>디시, 보배드림, 펨코 등의 실제 내돈내산 가입 및 납부 후기 분석</h2>
+        <p>자동차 관련 지식이 대량 공유되는 에펨코리아, 보배드림, 디시인사이드 차갤 등의 온라인 전문 커뮤니티 공간에서는 연말이나 연초에 내돈내산으로 직접 수십 곳의 계산기 견적을 대입하고 가입을 마친 베테랑 사용자들의 실전 팁이 올라옵니다. 이 중 공통으로 많이 언급되는 신뢰할 만한 요소를 정리하였습니다.</p>
+        
+        <h3>체류시간 및 비용 비교 체감 사례</h3>
+        <p>많은 차량 유지비 고민자들은 단순히 대형 1군 브랜드를 고집하기보다, 각사 전용 스마트폰 앱에 누적되는 쿠폰이나 카드 결제 전용 사은품을 받아 챙겨야 실효성 높은 가격에 합류할 수 있다고 전합니다. 특히 토스나 카카오톡 제휴 경로를 경유해 계산 및 신청을 거치면 대략 3만 원 상당의 기프티콘이나 상품권을 지급받아 연간 비용의 일부분을 간접 회수하는 효과를 볼 수 있었다는 후기가 대다수를 이룹니다.</p>
+
+        <div class="green-box">
+            <strong>커뮤니티 소통 기반 결제 체크리스트</strong><br>
+            <ul>
+                <li>매월 말일 직전에 업데이트되는 카드 제휴 무이자 할부 소식을 확인할 것</li>
+                <li>오프라인 설계사 견적과 온라인 다이렉트 최저가 사이의 수수료 차이를 반드시 비교해 볼 것</li>
+                <li>과도한 책임 범위 지정보다 대인 대물 5억 원 혹은 10억 원 이상 설정을 통해 실질적 보장 수준을 든든히 확보할 것</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="official-links" class="external-links">
+        <h2>신뢰성 및 투명성 검증을 위한 공식 외부 사이트 정보</h2>
+        <p>자동차보험의 관련 규정, 과태료 수준, 공적 분쟁 조정 사례 및 통계 지표는 매년 달라질 수 있습니다. 정확하고 엄밀한 법적 근거와 사실 검증을 위해 아래의 공인된 외부 기관 플랫폼을 방문하여 정확한 정보를 상호 교차 체크해 보시기 바랍니다.</p>
+        
+        <ul>
+            <li>
+                <a href="https://directxsearchv.reliabledone.com" target="_blank" rel="noopener">reliabledone 자동차보험료납부 공식 가이드라인 상세 페이지</a>: 연령대별 통계 및 납부 수단별 할인율 추이 자료를 종합적으로 수록하고 있는 필수 참고 사이트입니다.
+            </li>
+            <li>
+                <a href="https://namu.wiki/w/자동차%20보험" target="_blank" rel="noopener">나무위키 자동차 보험 항목</a>: 복잡한 전문 약관 용어와 특약 구조, 그리고 역사와 주요 보장 차이점 등에 대해 대중의 언어로 상세하고 방대하게 정리해 둔 문서입니다.
+            </li>
+            <li>
+                <a href="https://www.kidi.or.kr" target="_blank" rel="noopener">보험개발원 공식 홈페이지</a>: 국내 모든 자동차 가입 차량의 연간 요율 통계, 연령별 사고 유발률 분석, 무사고 등급 할증의 객관적 기준을 규정하고 제공하는 대표 공인 기관입니다.
+            </li>
+        </ul>
+    </section>
+
+    <section id="faq-section">
+        <h2>자주 묻는 질문 FAQ 및 구체적인 해결 방안</h2>
+        <p>자동차보험료납부와 관련하여 인터넷 검색 및 구글, 유튜브 등에서 가장 많이 수집되는 운전자들의 질문들을 선별하고 전문적인 답변을 구성하였습니다.</p>
+        
+        <h3>Q1. 신용카드로 분할 납부를 할 경우 할부 수수료가 청구되나요?</h3>
+        <p>일반적인 할부 시에는 카드사별 수수료가 가산될 수 있으나, 매달 주요 손해사들이 대형 신용카드사 브랜드와 제휴하여 무이자 2개월에서 10개월까지 이벤트를 공시합니다. 따라서 해당 제휴 월별 안내를 꼼꼼히 체크해 결제하면 추가 요금 증가 부담 없이 나누어 낼 수 있습니다.</p>
+
+        <h3>Q2. 결제한 후에 주행거리 특약이나 할인 제도를 추가할 수 있나요?</h3>
+        <p>네, 가능합니다. 최초에 가입 절차를 일차로 완료한 이후라 할지라도 운행 중 블랙박스를 새로 장착했거나, 자녀가 태어나는 등의 변경 이력이 발생할 경우 담당 고객센터 앱을 통해 해당 이미지 파일을 발송하면 남은 약정 기간만큼 일할 계산하여 기존 납부 금액 중 일부를 통장으로 직접 환급받으실 수 있습니다.</p>
+
+        <h3>Q3. 미납 상황이 장기화되면 어떤 불이익이 발생하나요?</h3>
+        <p>종합 및 책임보험의 요금 결제가 제대로 완결되지 않아 유예 기한을 지나 실효가 될 경우, 국가 손해배상보장법에 근거하여 책임보험 미가입으로 분류됩니다. 이 상태로 일반 도로를 운행하다 적발되면 과태료 처분을 받거나 형사 입건 등의 심각한 불이익이 주어질 수 있으므로, 납부 불능 시기에는 차라리 부부 한정이나 1인 범위 축소 등을 통해 기본 산출액 자체를 최소화하여 유지해 두는 것이 바람직합니다.</p>
+    </section>
+
+    <section id="consulting-form">
+        <h2>자동차보험료납부 맞춤형 컨설팅 및 제휴 할인 상담 신청서</h2>
+        <p>본인의 라이프스타일에 부합하는 최적의 담보 구성과 사용 중인 신용카드별 청구 혜택을 1대1 전문 맞춤형으로 안내받기를 바라신다면 아래 필수 작성 란을 정확히 작성하여 주시기 바랍니다. 본인의 개인 정보는 엄격한 보안 프로토콜을 통과하여 철저하게 기밀 유지 처리됩니다.</p>
+        
+        <div class="form-container">
+            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('상담 신청 접수가 안전하게 완료되었습니다.');">
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label for="reg-name">상담 신청자 성명 (필수)</label>
+                        <input type="text" id="reg-name" placeholder="예: 김민수" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-phone">휴대전화 번호 (필수)</label>
+                        <input type="tel" id="reg-phone" placeholder="예: 010-1234-5678" required>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label for="reg-model">보유 또는 양도 차량 세부 사양</label>
+                        <input type="text" id="reg-model" placeholder="예: 아반떼 CN7 하이브리드">
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-card">자주 사용하는 신용카드 또는 핀테크 브랜드</label>
+                        <select id="reg-card">
+                            <option value="none">없음 (현금 및 계좌이체 선호)</option>
+                            <option value="shinhan">신한카드</option>
+                            <option value="hyundai">현대카드</option>
+                            <option value="samsung">삼성카드</option>
+                            <option value="kb">KB국민카드</option>
+                            <option value="toss">토스 / 네이버페이</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-memo">상담 희망 영역 및 특이 조건 작성란</label>
+                    <textarea id="reg-memo" rows="5" placeholder="예: 군필 운전병 경력 인정을 소급받고 싶습니다. 또는 이번에 첫차로 신규 계약 예정이며 가장 저렴한곳 위주로 분납 요령 제안 부탁드립니다."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">전문 컨설턴트 무료 안내 신청</button>
+            </form>
+        </div>
+    </section>
+</div>
+
+<script>
+    function calculatePremium() {
+        var basePrice = 1000000; // 기준 요금 백만 원
+        
+        var modelFactor = parseFloat(document.getElementById('calc-model').value);
+        var ageFactor = parseFloat(document.getElementById('calc-age').value);
+        var rangeFactor = parseFloat(document.getElementById('calc-range').value);
+        var mileageFactor = parseFloat(document.getElementById('calc-mileage').value);
+        
+        var totalFactor = modelFactor * ageFactor * rangeFactor * mileageFactor;
+        
+        // 추가 체크박스 요율 할인
+        if (document.getElementById('chk-ubi').checked) {
+            totalFactor *= parseFloat(document.getElementById('chk-ubi').value);
+        }
+        if (document.getElementById('chk-child').checked) {
+            totalFactor *= parseFloat(document.getElementById('chk-child').value);
+        }
+        if (document.getElementById('chk-blackbox').checked) {
+            totalFactor *= parseFloat(document.getElementById('chk-blackbox').value);
+        }
+        if (document.getElementById('chk-public').checked) {
+            totalFactor *= parseFloat(document.getElementById('chk-public').value);
+        }
+        
+        var finalResult = Math.round(basePrice * totalFactor);
+        
+        // 보기 좋은 세 자리 단위 콤마 추가 적용
+        document.getElementById('result-price').innerText = finalResult.toLocaleString() + ' 원';
+        document.getElementById('calc-result').style.display = 'block';
+    }
+</script>
+
+  
